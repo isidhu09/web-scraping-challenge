@@ -10,56 +10,60 @@
 <body>
     <div class="container">
         <div class="jumbotron text-center">
-            <h1>Mission to Mars</h1>
-            <a href="/scrape"><button class="btn btn-coutline-light">Scrape New Data</button></a>
+            <h1 style="font-weight: bold">Mission to Mars</h1>
+            <a href="/scrape"><button class="btn btn-primary btn-lg">Scrape New Data</button></a>
         </div>
         <div>
-            <h2>Latest Mars News</h2>
-            <h3>{{data.news_title}}</h3>
+            <h2 style="font-weight: bold">Latest Mars News</h2>
+            <h4 style="font-weight: bold">{{data.news_title}}</h4>
             <p>{{data.news_para}}</p>
         </div>
         <div>
-            <h2>Featured Mars Image</h2>
-            <img src= {{data.image_url}} alt="Featured Mars Image">
+            <div class="col-md-7 col-sm-7 col-xs-12">
+                <h2 style="font-weight: bold">Featured Mars Image</h2>
+                <img src= {{data.image_url}} alt="Featured Mars Image">
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <h4 style="font-weight: bold">Mars Facts</h4>
+                {{data.table|safe}}
+            </div>
         </div>
         <div>
-            <h2>Mars Facts</h2>
-            {{data.table|safe}}
-        </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="heading" style="text-align: center; font-weight: bold">Mars Hemispheres</h2>
+                <hr>
+            </div>
+        </div>  
         <div>
-            <h2>Mars Hemispheres</h2>
-            <div>
-                <h2>Mars Hemispheres</h2>
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="{{data.hemisphere_image_urls.0.img_urls}}" alt="{{data.hemisphere_image_urls.0.titles}}" class="img-responsive">
-                        <div class="caption">
-                            <h3>{{data.hemisphere_image_urls.0.titles}}</h3>
-                        </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="thumbnail">
+                    <img src="{{data.hemisphere_image_urls.0.img_url}}" alt="{{data.hemisphere_image_urls.0.title}}" class="img-responsive">
+                    <div class="caption">
+                        <h4 style="font-weight: bold">{{data.hemisphere_image_urls.0.title}}</h4>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="{{data.hemisphere_image_urls.1.img_urls}}" alt="{{data.hemisphere_image_urls.1.titles}}" class="img-responsive">
-                        <div class="caption">
-                            <h3>{{data.hemisphere_image_urls.1.titles}}</h3>
-                        </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="thumbnail">
+                    <img src="{{data.hemisphere_image_urls.1.img_url}}" alt="{{data.hemisphere_image_urls.1.title}}" class="img-responsive">
+                    <div class="caption">
+                        <h4 style="font-weight: bold">{{data.hemisphere_image_urls.1.title}}</h4>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="{{data.hemisphere_image_urls.2.img_urls}}" alt="{{data.hemisphere_image_urls.2.titles}}" class="img-responsive">
-                        <div class="caption">
-                            <h3>{{data.hemisphere_image_urls.2.titles}}</h3>
-                        </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="thumbnail">
+                    <img src="{{data.hemisphere_image_urls.2.img_url}}" alt="{{data.hemisphere_image_urls.2.title}}" class="img-responsive">
+                    <div class="caption">
+                        <h4 style="font-weight: bold">{{data.hemisphere_image_urls.2.title}}</h4>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="{{data.hemisphere_image_urls.3.img_urls}}" alt="{{data.hemisphere_image_urls.3.titles}}" class="img-responsive">
-                        <div class="caption">
-                            <h3>{{mars_data.hemisphere_image_urls.3.titles}}</h3>
-                        </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="thumbnail">
+                    <img src="{{data.hemisphere_image_urls.3.img_url}}" alt="{{data.hemisphere_image_urls.3.title}}" class="img-responsive">
+                    <div class="caption">
+                        <h4 style="font-weight: bold">{{data.hemisphere_image_urls.3.title}}</h4>
                     </div>
                 </div>
             </div>
